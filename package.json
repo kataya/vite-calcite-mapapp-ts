@@ -1,5 +1,5 @@
 {
-  "name": "vite-popup-ts",
+  "name": "vite-calcite-mapapp-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,9 @@
     "vite": "^5.1.4"
   },
   "dependencies": {
-    "@arcgis/core": "^4.29.0",
-    "@esri/calcite-components": "^1.9.2"
+    "@arcgis/core": "^4.29.8",
+    "@esri/calcite-components": "^2.6.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-copy": "^3.5.0"
   }
 }

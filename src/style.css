@@ -1,33 +1,31 @@
+@import "@arcgis/core/assets/esri/themes/light/main.css";
 html,
 body,
 #viewDiv {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.prefControl {
-  padding: 5px;
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+body {
+    display: flex;
 }
 
-.panel-side {
-  padding: 0px;
-  width: 390px;
-  height: 30%;
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  z-index: 60;
-  opacity: 0.9;
+calcite-loader {
+    align-self: center;
+    justify-self: center;
 }
 
-#resultsListDiv {
-  overflow: auto;
-  display: none;
+#header-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#info-content {
+    padding: 0.75rem;
+}
+
+calcite-rating {
+    margin-top: 0.25rem;
 }
