@@ -31,6 +31,7 @@ import './style.css'
 // import module
 import { initCustomBasemaps } from "./basemaps";
 
+// load Webmap
 async function loadMap() {
 
     // map app main
@@ -120,20 +121,13 @@ async function loadMap() {
             };
         });
 
-        document.querySelector("calcite-shell")!.hidden = false;
-        
-        //document.querySelector("calcite-loader")!.hidden = true;
 
     });
 
-    //calcite-loader はWebMap 読込終了時に非表示設定に変更
-    // map.loadAll()
-    //     .then(() => {
-    //         document.querySelector("calcite-loader")!.hidden = true;
-    //     });
-    return map.loadAll().then();
-
+    //return map.loadAll().then();
+    return await map.loadAll();
 }
+
 
 // calcite-components-examples - vite を参考にして loader はコードで追加にし、htmlでの定義はコメントアウト
 // https://github.com/Esri/calcite-components-examples/blob/master/vite/main.js
@@ -144,4 +138,5 @@ loader.text = "loading ...";
 const webmap = await loadMap();
 
 //calcite-loader はWebMap 読込終了時に非表示設定に変更
+document.querySelector("calcite-shell")!.hidden = false;
 document.querySelector("calcite-loader")!.hidden = true;
